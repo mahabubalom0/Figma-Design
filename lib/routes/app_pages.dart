@@ -9,6 +9,8 @@ import 'package:file_uploader/features/home/view/home_screen.dart';
 
 import '../features/business/view/addbusiness.dart';
 import '../features/business/view/addbussinessfrome.dart';
+import '../features/business/view/businessdetails.dart';
+import '../features/business/view/businesspage.dart';
 import '../features/job deaitels/view/jobdeatiles.dart';
 import '../features/job/view/job.dart';
 
@@ -24,5 +26,7 @@ class AppPages {
     GetPage(name: AppRoutes.jobdeatiles, page: () => const Jobdeatiles()),
     GetPage(name: AppRoutes.addbusiness, page: () => const Addbusiness()),
     GetPage(name: AppRoutes.addbusinessfrome, page: () => const Addbussinessfrome()),
+    GetPage(name: AppRoutes.businesspage, page: () => const Businesspage()),
+    GetPage(name: AppRoutes.businessdetails, page: () => const Businessdetails()),
   ];
 }

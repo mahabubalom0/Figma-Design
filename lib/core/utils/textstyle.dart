@@ -31,9 +31,9 @@ class Textstyles {
 
   //Business text Styles
 
-  TextStyle smalltext() {
+  TextStyle smalltext({double ?fontsize}) {
     return TextStyle(
-      fontSize: 15,
+      fontSize:fontsize?? 16,
       fontFamily: "Means",
       color: AppColors.backgroundDark,
       fontWeight: FontWeight.w400,
@@ -70,7 +70,14 @@ class Textstyles {
     return GoogleFonts.dmSans(
       fontSize: fontsize ?? 14,
       fontWeight: FontWeight.w400,
-      color: AppColors.backgroundDark.withAlpha(150),
+      color: Color(0xFF00171D).withAlpha(190),
+    );
+  }
+  TextStyle texthint({double? fontsize}) {
+    return GoogleFonts.dmSans(
+      fontSize: fontsize ?? 14,
+      fontWeight: FontWeight.w400,
+      color: Color(0xFF00171D).withAlpha(150),
     );
   }
 }

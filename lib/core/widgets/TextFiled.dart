@@ -6,12 +6,11 @@ import '../utils/textstyle.dart';
 class TextFileds extends StatelessWidget {
   final String titletextc;
   final String hintText;
-  final Widget suffixIcon;
+
   const TextFileds({
     super.key,
     required this.titletextc,
     required this.hintText,
-    required this.suffixIcon,
   });
 
   @override
@@ -27,7 +26,7 @@ class TextFileds extends StatelessWidget {
           Container(
             width: double.infinity,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(100),
+              borderRadius: BorderRadius.circular(16),
               color: AppColors.elevatedSurfaceLight,
             ),
             clipBehavior: Clip.hardEdge,
@@ -36,15 +35,8 @@ class TextFileds extends StatelessWidget {
               maxLines: 5,
               decoration: InputDecoration(
                 hintText: hintText,
-                hintStyle: Textstyles().textL(fontsize: 12),
-                suffixIcon: Padding(
-                  padding: const EdgeInsets.only(right: 18.0),
-                  child: suffixIcon,
-                ),
-                suffixIconConstraints: BoxConstraints(
-                  minWidth: 20,
-                  minHeight: 20,
-                ),
+                hintStyle: Textstyles().texthint(fontsize: 12),
+
                 filled: true,
                 fillColor: Colors.transparent,
                 border: InputBorder.none,

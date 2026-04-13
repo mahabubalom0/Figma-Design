@@ -36,7 +36,7 @@ class Custometextfiled extends StatelessWidget {
             child: TextFormField(
               decoration: InputDecoration(
                 hintText: hintText,
-                hintStyle: Textstyles().textL(fontsize: 12),
+                hintStyle: Textstyles().texthint(fontsize: 12),
                 suffixIcon: Padding(
                   padding: const EdgeInsets.only(right: 18.0),
                   child: suffixIcon,
