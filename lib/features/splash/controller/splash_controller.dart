@@ -14,18 +14,17 @@ class SplashController extends GetxController {
   Future<void> _navigateToNextScreen() async {
     // Standard delay for splash screen visibility
     await Future.delayed(const Duration(seconds: 3));
-
-    final String? token = await _storageService.getAccessToken();
-    final bool hasOnboarded = _storageService.hasOnboarded();
-
-    if (token != null && token.isNotEmpty) {
-      Get.offAllNamed(AppRoutes.addbusiness);
-    } else {
-      if (hasOnboarded) {
-        Get.offAllNamed(AppRoutes.addbusiness);
-      } else {
-        Get.offAllNamed(AppRoutes.onboarding);
-      }
-    }
+    Get.offAllNamed(AppRoutes.main);
+    // final String? token = await _storageService.getAccessToken();
+    // final bool hasOnboarded = _storageService.hasOnboarded();
+    // if (token != null && token.isNotEmpty) {
+    //   Get.offAllNamed(AppRoutes.main);
+    // } else {
+    //   if (hasOnboarded) {
+    //     Get.offAllNamed(AppRoutes.main);
+    //   } else {
+    //     Get.offAllNamed(AppRoutes.onboarding);
+    //   }
+    // }
   }
 }

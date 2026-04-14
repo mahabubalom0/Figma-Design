@@ -1,4 +1,4 @@
-const Map<String, String> enUS = {
+const Map<String, String> enUS = <String, String>{
   'home_title': 'Posts',
   'retry': 'Retry',
 
@@ -8,7 +8,8 @@ const Map<String, String> enUS = {
 
   // Onboarding
   'onboarding_welcome': 'Welcome to Starter Template!',
-  'onboarding_desc': 'This is a placeholder for your feature-rich onboarding screens. Explain your core features here seamlessly.',
+  'onboarding_desc':
+      'This is a placeholder for your feature-rich onboarding screens. Explain your core features here seamlessly.',
   'get_started': 'Get Started',
 
   // Login
@@ -39,6 +40,7 @@ const Map<String, String> enUS = {
   'lang_ar': 'Arabic',
   'lang_bn': 'Bengali',
   'logout': 'Logout',
+  'my_account': 'My Account',
 
   // Common / Network
   'error': 'Error',
@@ -48,4 +50,43 @@ const Map<String, String> enUS = {
   'no_internet': 'No internet connection.',
   'request_timeout': 'Request timed out. Please try again.',
   'request_failed': 'Request failed.',
+
+  // Profile Page
+  "My Profile": "My Profile",
+  "Sarah Mitchell": "Sarah Mitchell",
+  "favourite": "Favourite",
+  "fiveitems": "5 Items",
+  "listing": "Listing",
+  "twobusiness": "2 Business",
+  "account": "Account",
+  "myaccount": "My Account",
+  "my_business": "My Business",
+  "payment": "Payment",
+  "upgrade_to_premium": "Upgrade to Premium",
+  "notification": "Notification",
+  "support": "Support",
+  "help_center": "Help Center",
+  "terms_&_conditions": "Terms & Conditions",
+  "privacy_policy": "Privacy Policy",
+  "sing-out": "Sing Out",
+  "accounts": "account",
+
+  // business Details Screens
+  "riverside": "Riverside Coffee Co.",
+  "about": "About ",
+  "guestFavourite": "Guest\nFavourite ",
+  "highlights": "Highlights",
+  "availability": "Availability",
+  "viewmore": "View More",
+  "editBusiness": "Edit Business",
+  "deleteBusiness": "Delete Business",
+
+  //business page
+  "myList": "My List",
+  "jacksonvilleYogaStudio": "Jacksonville Yoga Studio",
+
+  //business Splash Screens
+  "list_your_business": "List Your Business",
+  "stating": "Starting at \$10/month",
+  "get_start": "Get Started ",
 };

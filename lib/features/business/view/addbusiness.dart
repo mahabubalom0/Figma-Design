@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../../core/core.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_dimensions.dart';
 import '../../../core/utils/app_images.dart';
@@ -18,21 +19,23 @@ class Addbusiness extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         leading: Padding(
-          padding: const EdgeInsets.only(left: 16.0),
+          padding: const EdgeInsets.only(left: AppDimensions.paddingL),
           child: Container(
-            height: 45,
-            width: 45,
+            height: getHeight(AppDimensions.weight45),
+            width: getWidth(AppDimensions.weight45),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: AppColors.elevatedSurfaceLight,
             ),
             child: Center(
               child: Padding(
-                padding: const EdgeInsets.only(left: 10.0),
+                padding: EdgeInsets.only(
+                  left: getWidth(AppDimensions.paddingM),
+                ),
                 child: Icon(
                   Icons.arrow_back_ios,
                   size: AppDimensions.spaceXL,
-                  color: AppColors.backgroundDark,
+                  color: AppColors.backgroundDark.withAlpha(150),
                 ),
               ),
             ),
@@ -46,41 +49,52 @@ class Addbusiness extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset(ImagePath.sopping, width: 64, height: 64),
-            SizedBox(height: 16),
+            Image.asset(
+              ImagePath.sopping,
+              width: getWidth(AppDimensions.weight64),
+              height: getHeight(AppDimensions.weight64),
+            ),
+            SizedBox(height: getHeight(AppDimensions.paddingL)),
 
-            Text("List Your Business", style: Textstyles().leargertext()),
-            SizedBox(height: 10),
+            Text(AppStrings.listBusiness.tr, style: Textstyles().leargertext()),
+            SizedBox(height: AppDimensions.paddingM),
             Text(
               "Get discovered by thousands \n of Jacksonville locals",
               textAlign: TextAlign.center,
-              style: Textstyles().textL(fontsize: 14),
+              style: Textstyles().textL(fontsize: AppDimensions.fontS),
             ),
-            SizedBox(height: 18),
-            Text("Starting at \$10/month", style: Textstyles().textL()),
+            SizedBox(height: AppDimensions.paddingXL),
+            Text(
+              AppStrings.stating.tr,
+              style: GoogleFonts.dmSans(
+                fontSize: AppDimensions.fontM,
+                fontWeight: FontWeight.w600,
+                color: AppColors.backgroundDark.withValues(alpha: 0.9),
+              ),
+            ),
 
-            SizedBox(height: 10),
+            SizedBox(height: AppDimensions.paddingM),
             Padding(
               padding: EdgeInsetsGeometry.only(
-                top: 12,
-                bottom: 12,
-                left: 92,
-                right: 92,
+                top: getHeight(AppDimensions.radiusL),
+                bottom: getHeight(AppDimensions.radiusL),
+                left: getWidth(AppDimensions.radius92),
+                right: getWidth(AppDimensions.radius92),
               ),
               child: GestureDetector(
-                onTap: () => Get.toNamed(AppRoutes.addbusinessfrome),
+                onTap: () => Get.toNamed(AppRoutes.businesspage),
                 child: Container(
-                  height: 45,
+                  height: getHeight(AppDimensions.weight45),
                   decoration: BoxDecoration(
-                    color: Color(0xFF006778),
-                    borderRadius: BorderRadius.circular(32),
+                    color: AppColors.buttoncolor,
+                    borderRadius: BorderRadius.circular(AppDimensions.radius32),
                   ),
 
                   child: Center(
                     child: Text(
-                      "Get Started",
+                      AppStrings.get_start.tr,
                       style: GoogleFonts.plusJakartaSans(
-                        fontSize: 15,
+                        fontSize: AppDimensions.fontM,
                         color: AppColors.backgroundLight,
                         fontWeight: FontWeight.w600,
                       ),

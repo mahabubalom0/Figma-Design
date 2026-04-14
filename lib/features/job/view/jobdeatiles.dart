@@ -16,21 +16,21 @@ class Jobdeatiles extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        leadingWidth: 100,
+        leadingWidth: AppDimensions.radiusCircular,
         leading: GestureDetector(
           onTap: () => Get.back(),
           child: Padding(
-            padding: const EdgeInsets.only(left: 16.0),
+            padding: const EdgeInsets.only(left: AppDimensions.paddingL),
             child: Container(
-              height: 45,
-              width: 45,
+              height: AppDimensions.paddingHUGEXXY,
+              width: AppDimensions.paddingHUGEXXY,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: AppColors.elevatedSurfaceLight,
               ),
               child: Center(
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 10.0),
+                  padding: const EdgeInsets.only(left: AppDimensions.radiusM),
                   child: Icon(
                     Icons.arrow_back_ios,
                     size: AppDimensions.spaceXL,
@@ -45,24 +45,24 @@ class Jobdeatiles extends StatelessWidget {
           "Job details",
           style: TextStyle(
             color: AppColors.backgroundDark,
-            fontSize: 18,
+            fontSize: AppDimensions.fontXL,
             fontFamily: "Means",
           ),
         ),
         actions: [
           CustomSvgIcon(
             assetName: ImagePath.share,
-            width: 24,
-            height: 24,
+            width: AppDimensions.fontXXXL,
+            height: AppDimensions.fontXXXL,
             color: AppColors.backgroundDark.withAlpha(180),
           ),
-          SizedBox(width: 18),
+          SizedBox(width: AppDimensions.fontXL),
           Icon(
             Icons.favorite_border,
             color: AppColors.backgroundDark.withAlpha(150),
-            size: 24,
+            size: AppDimensions.fontXL,
           ),
-          SizedBox(width: 15),
+          SizedBox(width: AppDimensions.radiusXL),
         ],
       ),
 
@@ -71,17 +71,17 @@ class Jobdeatiles extends StatelessWidget {
           child: SizedBox(
             width: double.infinity,
             child: Container(
-              margin: EdgeInsetsGeometry.only(top: 2),
+              margin: EdgeInsetsGeometry.only(top: AppDimensions.paddingYS),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
 
                 children: [
-                  CustomSvgIcon(assetName: ImagePath.w, width: 64, height: 64),
-                  SizedBox(height: 20),
+                  CustomSvgIcon(assetName: ImagePath.w, width: AppDimensions.ImageXXXS, height: AppDimensions.ImageXXXS),
+                  SizedBox(height: AppDimensions.paddingYS),
                   Text(
                     "Project Manager",
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: AppDimensions.fontXXXL,
                       fontFamily: "Means",
 
                       color: AppColors.backgroundDark,
@@ -94,16 +94,16 @@ class Jobdeatiles extends StatelessWidget {
                       color: Color(0xFF00171D).withAlpha(180),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: AppDimensions.paddingXL),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Container(
                         padding: EdgeInsetsDirectional.only(
-                          top: 2,
-                          bottom: 2,
-                          start: 6,
-                          end: 6,
+                          top: AppDimensions.paddingYS,
+                          bottom: AppDimensions.paddingYS,
+                          start: AppDimensions.paddingSX,
+                          end: AppDimensions.paddingSX,
                         ),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(
@@ -112,7 +112,7 @@ class Jobdeatiles extends StatelessWidget {
                           color: AppColors.jobmistirostcolor.withAlpha(100),
                           border: BoxBorder.all(
                             color: AppColors.jobmistirostcolor,
-                            width: 1.0,
+                            width: AppDimensions.weight1,
                           ),
                         ),
                         child: Center(
@@ -128,10 +128,10 @@ class Jobdeatiles extends StatelessWidget {
                       SizedBox(width: AppDimensions.spaceM),
                       Container(
                         padding: EdgeInsetsDirectional.only(
-                          top: 2,
-                          bottom: 2,
-                          start: 6,
-                          end: 6,
+                          top: AppDimensions.paddingYS,
+                          bottom: AppDimensions.paddingYS,
+                          start: AppDimensions.paddingSX,
+                          end: AppDimensions.paddingSX,
                         ),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(
@@ -140,7 +140,7 @@ class Jobdeatiles extends StatelessWidget {
                           color: AppColors.joblightskyblur.withAlpha(100),
                           border: BoxBorder.all(
                             color: AppColors.joblightskyblur,
-                            width: 1.0,
+                            width: AppDimensions.weight1,
                           ),
                         ),
                         child: Center(
@@ -156,10 +156,10 @@ class Jobdeatiles extends StatelessWidget {
                       SizedBox(width: AppDimensions.spaceM),
                       Container(
                         padding: EdgeInsetsDirectional.only(
-                          top: 2,
-                          bottom: 2,
-                          start: 6,
-                          end: 6,
+                          top: AppDimensions.paddingYS,
+                          bottom: AppDimensions.paddingYS,
+                          start: AppDimensions.paddingSX,
+                          end: AppDimensions.paddingSX,
                         ),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(
@@ -168,7 +168,7 @@ class Jobdeatiles extends StatelessWidget {
                           color: AppColors.joblightminigreen.withAlpha(100),
                           border: BoxBorder.all(
                             color: AppColors.joblightminigreen,
-                            width: 1.0,
+                            width: AppDimensions.weight1,
                           ),
                         ),
                         child: Center(
@@ -183,14 +183,14 @@ class Jobdeatiles extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: 8),
+                  SizedBox(height: AppDimensions.paddingS),
                   Container(
-                    width: 150,
+                    width: AppDimensions.skeletonWidthMedium,
                     padding: EdgeInsetsGeometry.only(
-                      top: 2,
-                      bottom: 2,
-                      right: 8,
-                      left: 8,
+                      top:AppDimensions.paddingYS,
+                      bottom: AppDimensions.paddingYS,
+                      right: AppDimensions.paddingS,
+                      left: AppDimensions.paddingS,
                     ),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(
@@ -199,7 +199,7 @@ class Jobdeatiles extends StatelessWidget {
                       color: AppColors.joblightLavender.withAlpha(100),
                       border: BoxBorder.all(
                         color: AppColors.joblightLavender,
-                        width: 1.0,
+                        width: AppDimensions.weight1,
                       ),
                     ),
                     child: Center(
@@ -211,17 +211,17 @@ class Jobdeatiles extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  SizedBox(height: AppDimensions.paddingXL),
                   Container(
-                    margin: EdgeInsetsGeometry.symmetric(horizontal: 40),
+                    margin: EdgeInsetsGeometry.symmetric(horizontal: AppDimensions.paddingHUGEY),
                     padding: EdgeInsetsGeometry.only(
-                      top: 12,
-                      bottom: 12,
-                      left: 16,
-                      right: 16,
+                      top: AppDimensions.paddingM,
+                      bottom: AppDimensions.paddingM,
+                      left: AppDimensions.paddingL,
+                      right: AppDimensions.paddingL,
                     ),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadiusGeometry.circular(60),
+                      borderRadius: BorderRadiusGeometry.circular(AppDimensions.radiusXXXL),
                       color: Color(0xff006778),
                     ),
                     child: Center(
@@ -236,7 +236,7 @@ class Jobdeatiles extends StatelessWidget {
                   ),
                   SizedBox(height: 20),
                   Padding(
-                    padding: EdgeInsetsGeometry.only(left: 15, right: 15),
+                    padding: EdgeInsetsGeometry.only(left: AppDimensions.paddingL, right: AppDimensions.paddingL,),
                     child: Align(
                       alignment: AlignmentGeometry.centerLeft,
                       child: Column(
@@ -252,18 +252,18 @@ class Jobdeatiles extends StatelessWidget {
                               color: AppColors.backgroundDark,
                             ),
                           ),
-                          SizedBox(height: 12),
+                          SizedBox(height: AppDimensions.paddingM),
                           Text(
                             "We believe local communities thrive when people can easily "
                             "discover what’s happening around them, support small businesses, find local jobs, and"
                             " stay connected to their city. That’s why we built a community-first platform designed "
                             "specifically for Jacksonville and the 904.",
                             style: GoogleFonts.dmSans(
-                              fontSize: 14,
+                              fontSize: AppDimensions.fontS,
                               color: AppColors.backgroundDark.withAlpha(180),
                             ),
                           ),
-                          SizedBox(height: 20),
+                          SizedBox(height: AppDimensions.paddingXL),
                           Text(
                             "Job Details",
                             style: TextStyle(
@@ -272,7 +272,7 @@ class Jobdeatiles extends StatelessWidget {
                               color: AppColors.backgroundDark,
                             ),
                           ),
-                          SizedBox(height: 12),
+                          SizedBox(height: AppDimensions.paddingM),
                           Text(
                             "We’re seeking a detail-oriented Project Manager to lead local projects from planning through completion. This role works closely with internal teams, vendors, and clients to ensure projects are delivered on time, within scope, and on budget.",
                             style: GoogleFonts.dmSans(
@@ -280,7 +280,7 @@ class Jobdeatiles extends StatelessWidget {
                               color: AppColors.backgroundDark.withAlpha(180),
                             ),
                           ),
-                          SizedBox(height: 20),
+                          SizedBox(height: AppDimensions.paddingXL),
                           Text(
                             "Qualification",
                             style: TextStyle(
@@ -293,7 +293,7 @@ class Jobdeatiles extends StatelessWidget {
 
                           SizedBox(height: 12),
                           Padding(
-                            padding: const EdgeInsets.only(left: 14.0),
+                            padding: const EdgeInsets.only(left: AppDimensions.paddingL),
                             child: Column(
                               children: [
                                 _buildBulletPoint(
@@ -308,7 +308,7 @@ class Jobdeatiles extends StatelessWidget {
                               ],
                             ),
                           ),
-                          SizedBox(height: 20),
+                          SizedBox(height: AppDimensions.paddingXL),
                           Text(
                             "Benefits",
                             style: TextStyle(
@@ -318,9 +318,9 @@ class Jobdeatiles extends StatelessWidget {
                               color: AppColors.backgroundDark,
                             ),
                           ),
-                          SizedBox(height: 12),
+                          SizedBox(height: AppDimensions.paddingM),
                           Padding(
-                            padding: const EdgeInsets.only(left: 14.0),
+                            padding: const EdgeInsets.only(left: AppDimensions.paddingL),
                             child: Column(
                               children: [
                                 _buildBulletPoint(
@@ -338,15 +338,15 @@ class Jobdeatiles extends StatelessWidget {
                               ],
                             ),
                           ),
-                          SizedBox(height: 20),
+                          SizedBox(height: AppDimensions.paddingXL),
                           Container(
-                            height: 230,
+                            height: AppDimensions.skeletonWidthLargX,
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadiusGeometry.circular(12),
+                              borderRadius: BorderRadiusGeometry.circular(AppDimensions.radiusL),
                               color: AppColors.elevatedSurfaceLight,
                             ),
                             child: Padding(
-                              padding: const EdgeInsets.all(16),
+                              padding: const EdgeInsets.all(AppDimensions.radiusXL),
                               child: Column(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceAround,
@@ -354,22 +354,22 @@ class Jobdeatiles extends StatelessWidget {
                                   Row(
                                     children: [
                                       Container(
-                                        height: 40,
-                                        width: 40,
+                                        height: AppDimensions.paddingHUGEY,
+                                        width: AppDimensions.paddingHUGEY,
                                         decoration: BoxDecoration(
                                           borderRadius: BorderRadius.circular(
-                                            30,
+                                            AppDimensions.radiusYYLX,
                                           ),
                                           color: AppColors.backgroundDark
                                               .withAlpha(20),
                                         ),
                                         child: CustomSvgIcon(
                                           assetName: ImagePath.w,
-                                          width: 32,
-                                          height: 32,
+                                          width: AppDimensions.paddingXXL,
+                                          height: AppDimensions.paddingXXL,
                                         ),
                                       ),
-                                      SizedBox(width: 10),
+                                      SizedBox(width: AppDimensions.paddingM),
                                       Column(
                                         crossAxisAlignment:
                                             CrossAxisAlignment.start,
@@ -384,7 +384,7 @@ class Jobdeatiles extends StatelessWidget {
                                           Text(
                                             "Jacksonville, Florida",
                                             style: Textstyles().textsmall(
-                                              fontsize: 12,
+                                              fontsize: AppDimensions.fontXS,
                                               color: AppColors.backgroundDark
                                                   .withAlpha(180),
                                             ),
@@ -393,9 +393,9 @@ class Jobdeatiles extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  SizedBox(height: 16),
+                                  SizedBox(height: AppDimensions.paddingL),
                                   Divider(),
-                                  SizedBox(height: 16),
+                                  SizedBox(height: AppDimensions.paddingL),
                                   Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceAround,
@@ -420,7 +420,7 @@ class Jobdeatiles extends StatelessWidget {
                                       ),
 
                                       SizedBox(
-                                        height: 40,
+                                        height: AppDimensions.paddingHUGEY,
                                         child: VerticalDivider(
                                           thickness: 1,
 
@@ -449,7 +449,7 @@ class Jobdeatiles extends StatelessWidget {
                                       ),
 
                                       SizedBox(
-                                        height: 40,
+                                        height: AppDimensions.paddingHUGEY,
                                         child: VerticalDivider(
                                           thickness: 1,
                                           color: AppColors.backgroundDark
@@ -487,7 +487,7 @@ class Jobdeatiles extends StatelessWidget {
                   ),
 
                   Padding(
-                    padding: const EdgeInsets.all(20),
+                    padding: const EdgeInsets.all(AppDimensions.paddingXL),
                     child: Column(
                       children: [
                         Align(
@@ -496,43 +496,43 @@ class Jobdeatiles extends StatelessWidget {
                             "Contact Info",
                             style: TextStyle(
                               fontFamily: "Means",
-                              fontSize: 16,
+                              fontSize: AppDimensions.fontL,
                               color: AppColors.backgroundDark,
                             ),
                           ),
                         ),
-                        SizedBox(height: 12),
+                        SizedBox(height: AppDimensions.paddingM),
                         _contactdesign(
                           CustomSvgIcon(
                             assetName: ImagePath.word,
-                            width: 20,
-                            height: 20,
+                            width: AppDimensions.paddingXL,
+                            height: AppDimensions.paddingXL,
                           ),
                           "www.cmg3tech.com",
                         ),
-                        SizedBox(height: 10),
+                        SizedBox(height: AppDimensions.paddingM),
                         _contactdesign(
                           CustomSvgIcon(
                             assetName: ImagePath.Location,
-                            width: 20,
-                            height: 20,
+                            width: AppDimensions.paddingXL,
+                            height: AppDimensions.paddingXL,
                           ),
                           "Downtown Jacksonville, Florida",
                         ),
-                        SizedBox(height: 40),
+                        SizedBox(height: AppDimensions.paddingHUGEY),
                         InkWell(
                           onTap: () {
                             Get.snackbar("Click", "Apply Successfully");
                           },
                           child: Container(
                             padding: EdgeInsetsGeometry.only(
-                              top: 12,
-                              bottom: 12,
-                              left: 16,
-                              right: 16,
+                              top: AppDimensions.paddingM,
+                              bottom: AppDimensions.paddingM,
+                              left: AppDimensions.paddingL,
+                              right: AppDimensions.paddingL,
                             ),
                             decoration: BoxDecoration(
-                              borderRadius: BorderRadiusGeometry.circular(60),
+                              borderRadius: BorderRadiusGeometry.circular(AppDimensions.radiusXXXL),
                               color: Color(0xff006778),
                             ),
                             child: Center(
@@ -560,7 +560,7 @@ class Jobdeatiles extends StatelessWidget {
     return Row(
       children: [
         icons,
-        SizedBox(width: 10),
+        SizedBox(width: AppDimensions.paddingM),
         Text(
           text,
           style: Textstyles().textsmall(
@@ -574,7 +574,7 @@ class Jobdeatiles extends StatelessWidget {
 
   Widget _buildBulletPoint(String text) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 4.0),
+      padding: const EdgeInsets.symmetric(vertical: AppDimensions.paddingXS),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -582,16 +582,16 @@ class Jobdeatiles extends StatelessWidget {
           Text(
             "•",
             style: TextStyle(
-              fontSize: 14,
+              fontSize: AppDimensions.fontS,
               color: AppColors.backgroundDark.withAlpha(180),
             ),
           ),
-          SizedBox(width: 10),
+          SizedBox(width: AppDimensions.paddingM),
           Expanded(
             child: Text(
               text,
               style: GoogleFonts.dmSans(
-                fontSize: 14,
+                fontSize: AppDimensions.fontS,
                 color: AppColors.backgroundDark.withAlpha(180),
               ),
             ),

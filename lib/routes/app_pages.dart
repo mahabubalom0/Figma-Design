@@ -11,7 +11,7 @@ import '../features/business/view/addbusiness.dart';
 import '../features/business/view/addbussinessfrome.dart';
 import '../features/business/view/businessdetails.dart';
 import '../features/business/view/businesspage.dart';
-import '../features/job deaitels/view/jobdeatiles.dart';
+import '../features/job/view/jobdeatiles.dart';
 import '../features/job/view/job.dart';
 
 class AppPages {

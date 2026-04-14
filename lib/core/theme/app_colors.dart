@@ -82,6 +82,20 @@ class AppColors {
 
   static const Color scrimLight = Color(0x805C6BC0);
   static const Color scrimDark = Color(0x80000000);
+  static const Color boxcolor = Color(0xFF4FBF6B);
+  static const Color textcolor= Color(0xFF008321);
+
+
+
+
+
+
+
+
+  // color
+
+  static const Color red=Colors.red;
+  static const Color buttoncolor=Color(0xFF006778);
 
   // ── Gradient helpers ─────────────────────────────────────────────────────────
   static const LinearGradient primaryGradientLight = LinearGradient(
@@ -99,6 +113,17 @@ class AppColors {
 
 
 
+
+  // box color
+
+  static const Color box2color=Color(0xFFE8604A);
+  static const Color box3color=Color(0xFF4FBF6B);
+  static const Color box4color=Color(0xFFAA26FF);
+  static const Color text2color=Color(0xFFBE4430);
+  static const Color text3color=Color(0xFF008321);
+  static const Color text4color=Color(0xFFAA26FF);
+
+
   // Job Color
  static const Color jobprymaricolor=Color(0xFF006778);
  static const Color jobsecondarycolor=Color(0xFFffffff);
@@ -108,6 +133,14 @@ class AppColors {
  static const Color joblightLavender =Color(0xFFded4fa);
  static const Color joblightLavendertext =Color(0xFF6536f8);
 }
+
+
+//colors
+
+
+
+
+
 
 // ── ThemeExtension so colors are accessible via Theme.of(context) ─────────────
 

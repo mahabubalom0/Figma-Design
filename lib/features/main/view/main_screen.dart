@@ -14,21 +14,21 @@ class MainScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: colors.background,
-      appBar: AppBar(
-        title: Obx(() {
-          final title = switch (controller.currentIndex.value) {
-            0 => AppStrings.homeTitle.tr,
-            1 => AppStrings.tabProfile.tr,
-            _ => AppStrings.appName.tr,
-          };
-          return CustomText(
-            text: title,
-            fontSize: AppDimensions.fontXXL,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          );
-        }),
-      ),
+      // appBar: AppBar(
+      //   title: Obx(() {
+      //     final title = switch (controller.currentIndex.value) {
+      //       0 => AppStrings.homeTitle.tr,
+      //       1 => AppStrings.tabProfile.tr,
+      //       _ => AppStrings.appName.tr,
+      //     };
+      //     return CustomText(
+      //       text: title,
+      //       fontSize: AppDimensions.fontXXL,
+      //       fontWeight: FontWeight.bold,
+      //       color: Colors.white,
+      //     );
+      //   }),
+      // ),
       body: Obx(
         () => IndexedStack(
           index: controller.currentIndex.value,
@@ -51,9 +51,9 @@ class MainScreen extends StatelessWidget {
               label: AppStrings.tabHome.tr,
             ),
             BottomNavigationBarItem(
-              icon: const Icon(Icons.home_rounded),
-              activeIcon: const Icon(Icons.home_rounded),
-              label: AppStrings.tabHome.tr,
+              icon: const Icon(Icons.business),
+              activeIcon: const Icon(Icons.business),
+              label: "Job",
             ),
             BottomNavigationBarItem(
               icon: const Icon(Icons.home_rounded),

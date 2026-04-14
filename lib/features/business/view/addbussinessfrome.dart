@@ -19,28 +19,28 @@ class Addbussinessfrome extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        leadingWidth: 80,
+        leadingWidth: AppDimensions.weight80,
         leading: Padding(
-          padding: const EdgeInsets.only(left: 16.0),
+          padding: const EdgeInsets.only(left: AppDimensions.padding16),
           child: GestureDetector(
 
             onTap: (){
               Get.back();
             },
             child: Container(
-              height: 45,
-              width: 45,
+              height: AppDimensions.height45,
+              width:  AppDimensions.weight45,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: AppColors.elevatedSurfaceLight,
               ),
               child: Center(
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 10.0),
+                  padding: const EdgeInsets.only(left: AppDimensions.padding10),
                   child: Icon(
                     Icons.arrow_back_ios,
                     size: AppDimensions.spaceXL,
-                    color: AppColors.backgroundDark,
+                    color: AppColors.backgroundDark.withAlpha(190),
                   ),
                 ),
               ),
@@ -52,10 +52,10 @@ class Addbussinessfrome extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(
-            left: 18.0,
-            right: 18,
-            bottom: 36,
-            top: 38,
+            left: AppDimensions.padding18,
+            right: AppDimensions.padding18,
+            bottom: AppDimensions.padding36,
+            top: AppDimensions.padding36,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -65,11 +65,11 @@ class Addbussinessfrome extends StatelessWidget {
                 hintText: "Enter business name",
                 suffixIcon: CustomSvgIcon(
                   assetName: ImagePath.store,
-                  width: 20,
-                  height: 20,
+                  width: AppDimensions.weight20,
+                  height: AppDimensions.height20,
                 ),
               ),
-              SizedBox(height: 12),
+              SizedBox(height: AppDimensions.paddingM),
               Custometextfiled(
                 titletextc: "Business Type",
                 hintText: "Select business type",
@@ -78,7 +78,7 @@ class Addbussinessfrome extends StatelessWidget {
                   color: AppColors.backgroundDark.withAlpha(160),
                 ),
               ),
-              SizedBox(height: 12),
+              SizedBox(height: AppDimensions.paddingM),
               Custometextfiled(
                 titletextc: "Category",
                 hintText: "Select category",
@@ -87,7 +87,7 @@ class Addbussinessfrome extends StatelessWidget {
                   color: AppColors.backgroundDark.withAlpha(160),
                 ),
               ),
-              SizedBox(height: 12),
+              SizedBox(height: AppDimensions.paddingM),
               Custometextfiled(
                 titletextc: "Business Tag",
                 hintText: "Select tag",
@@ -96,49 +96,49 @@ class Addbussinessfrome extends StatelessWidget {
                   color: AppColors.backgroundDark.withAlpha(160),
                 ),
               ),
-              SizedBox(height: 14),
+              SizedBox(height: AppDimensions.paddingXL),
               TextFileds(
                 titletextc: "About",
                 hintText: "Describe about business...",
               ),
-              SizedBox(height: 14),
+              SizedBox(height: AppDimensions.paddingXL),
               TextFileds(
                 titletextc: "Highlights",
                 hintText: "Describe about highlights...",
               ),
-              SizedBox(height: 12),
+              SizedBox(height: AppDimensions.paddingXL),
               Custometextfiled(
                 titletextc: "Phone Number",
                 hintText: "Enter phone number",
                 suffixIcon: CustomSvgIcon(
                   assetName: ImagePath.call,
-                  width: 20,
-                  height: 20,
+                  width: AppDimensions.height20,
+                  height: AppDimensions.weight20,
                 ),
               ),
-              SizedBox(height: 14),
+              SizedBox(height: AppDimensions.paddingXL),
               Custometextfiled(
                 titletextc: "Address",
                 hintText: "Enter business location",
                 suffixIcon: CustomSvgIcon(
                   assetName: ImagePath.Location,
-                  height: 20,
-                  width: 20,
+                  height: AppDimensions.height20,
+                  width: AppDimensions.weight20,
                   color: AppColors.backgroundDark.withAlpha(160),
                 ),
               ),
-              SizedBox(height: 14),
+              SizedBox(height: AppDimensions.padding14),
               Custometextfiled(
                 titletextc: "Website",
                 hintText: "Enter website",
                 suffixIcon: CustomSvgIcon(
                   assetName: ImagePath.word,
-                  height: 20,
-                  width: 20,
+                  height: AppDimensions.height20,
+                  width: AppDimensions.weight20,
                   color: AppColors.backgroundDark.withAlpha(160),
                 ),
               ),
-              SizedBox(height: 14),
+              SizedBox(height: AppDimensions.padding14),
               Row(
                 children: [
                   Expanded(
@@ -147,8 +147,8 @@ class Addbussinessfrome extends StatelessWidget {
                       hintText: "Select time",
                       suffixIcon: CustomSvgIcon(
                         assetName: ImagePath.time,
-                        height: 20,
-                        width: 20,
+                        height: AppDimensions.paddingXL,
+                        width: AppDimensions.paddingXL,
                       ),
                     ),
                   ),
@@ -159,21 +159,21 @@ class Addbussinessfrome extends StatelessWidget {
                       hintText: "Select time",
                       suffixIcon: CustomSvgIcon(
                         assetName: ImagePath.time,
-                        height: 20,
-                        width: 20,
+                        height: AppDimensions.paddingXL,
+                        width: AppDimensions.paddingXL,
                       ),
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 14),
+              SizedBox(height: AppDimensions.padding14),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text("Business Cover", style: Textstyles().textL()),
-                  SizedBox(height: 10),
+                  SizedBox(height: AppDimensions.paddingM),
                   Container(
-                    height: 144,
+                    height: AppDimensions.height144,
                     width: double.infinity,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
@@ -185,14 +185,14 @@ class Addbussinessfrome extends StatelessWidget {
                         children: [
                           CustomSvgIcon(
                             assetName: ImagePath.month,
-                            height: 45,
-                            width: 45,
+                            height: AppDimensions.weight45,
+                            width: AppDimensions.weight45,
                           ),
-                          SizedBox(height: 14),
+                          SizedBox(height: AppDimensions.padding14),
                           Text(
                             "Upload Cover Photo",
                             style: GoogleFonts.dmSans(
-                              fontSize: 12,
+                              fontSize: AppDimensions.fontXS,
                               fontWeight: FontWeight.w400,
                             ),
                           ),
@@ -200,11 +200,11 @@ class Addbussinessfrome extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 26),
+                  SizedBox(height: AppDimensions.padding26),
                   GestureDetector(
                     onTap: () => Get.toNamed(AppRoutes.businesspage),
                     child: Container(
-                      height: 45,
+                      height: AppDimensions.weight45,
                       width: double.infinity,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(32),
@@ -214,7 +214,7 @@ class Addbussinessfrome extends StatelessWidget {
                         child: Text(
                           "Submit",
                           style: GoogleFonts.plusJakartaSans(
-                            fontSize: 15,
+                            fontSize: AppDimensions.fontM,
                             fontWeight: FontWeight.w600,
                             color: AppColors.backgroundLight,
                           ),
@@ -222,7 +222,7 @@ class Addbussinessfrome extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 15,)
+                  SizedBox(height: AppDimensions.paddingL,)
                 ],
               ),
             ],

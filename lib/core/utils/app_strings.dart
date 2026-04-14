@@ -40,6 +40,7 @@ class AppStrings {
   static const String langAr = 'lang_ar';
   static const String langBn = 'lang_bn';
   static const String logout = 'logout';
+  static const String myAccount = 'my_account';
 
   // ─── Common ───────────────────────────────────────────────────────────────
   static const String error = 'error';
@@ -49,4 +50,49 @@ class AppStrings {
   static const String noInternet = 'no_internet';
   static const String requestTimeout = 'request_timeout';
   static const String requestFailed = 'request_failed';
+
+  // Profile  Page
+  static const String myProfile = "My Profile";
+  static const String sarahMitchel = "Sarah Mitchell";
+  static const String favourite = "favourite";
+  static const String fiveitem = "fiveitems";
+  static const String listing = "listing";
+  static const String twobusiness = "twobusiness";
+  static const String account = "account";
+  static const String myaccount = "myaccount";
+  static const String mybusiness = "my_business";
+  static const String upgradetoPremium = "upgrade_to_premium";
+  static const String notification = "notification";
+  static const String support = "support";
+  static const String payment = "payment";
+  static const String helpCenter = "help_center";
+  static const String TermsConditions = "terms_&_conditions";
+  static const String privacypolicy = "privacy_policy";
+  static const String accounts = "accounts";
+  static const String SingOut = "sing-out";
+
+  // business Details Screens
+
+  static const String riverside = "riverside";
+  static const String about = "about";
+  static const String guestFavourite = "guestFavourite";
+  static const String highlights = "highlights";
+  static const String availability = "availability";
+  static const String editBusiness = "editBusiness";
+  static const String viewmore = "viewmore";
+  static const String deleteBusiness = "deleteBusiness";
+
+  // business Page
+
+  static const String mylist = "myList";
+  static const String jacksonvilleYogaStudio = "jacksonvilleYogaStudio";
+
+// business splash screens
+
+
+static const String listBusiness = "list_your_business";
+static const String stating = "stating";
+static const String get_start = "get_start";
+
+
 }

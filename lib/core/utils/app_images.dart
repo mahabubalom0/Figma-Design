@@ -22,9 +22,23 @@ class ImagePath {
   static const String caching = '${asset}cacingroom.jpg';
   static const String room = '${asset}room.jpg';
   static const String clock = '${asset}clock.svg';
+  static const String business = '${asset}business.svg';
   static const String star = '${asset}StarFill.svg';
   static const String map = '${asset}maplocation.png';
   static const String phone = '${asset}Call.png';
+  static const String persion = '${asset}persion.png';
+  static const String notification = '${asset}Notification.svg';
+  static const String user = '${asset}User.svg';
+  static const String storepro = '${asset}Store (1).svg';
+  static const String money = '${asset}Money.svg';
+  static const String suppport = '${asset}Support.svg';
+  static const String hellp = '${asset}Help.svg';
+  static const String law = '${asset}Law.svg';
+  static const String ai = '${asset}AI.svg';
+  static const String home = '${asset}Home stroke.svg';
+  static const String store2 = '${asset}Store (2).svg';
+  static const String userfill = '${asset}User Fill.svg';
+
 
   // Add other PNG/JPG image names below:
   // static const String placeholder = '${asset}placeholder.png';
