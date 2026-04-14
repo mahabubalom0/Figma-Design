@@ -67,7 +67,8 @@ class AppColors {
   static const Color successDark = Color(0xFF66BB6A); // Green 400
 
   static const Color warningLight = Color(0xFFF57F17); // Amber 900
-  static const Color warningDark = Color(0xFFFFCA28); // Amber 400
+  static const Color warningDark = Color(0xFFFFCA28); // Amber 4000xFFFFB100
+  static const Color amabr=Color(0xFFFFB100);
 
   static const Color errorLight = Color(0xFFB71C1C); // Red 900
   static const Color errorDark = Color(0xFFEF5350); // Red 400

@@ -89,4 +89,49 @@ const Map<String, String> enUS = <String, String>{
   "list_your_business": "List Your Business",
   "stating": "Starting at \$10/month",
   "get_start": "Get Started ",
+
+
+  //business frome screens
+
+  "add_business":"Add Business",
+  "business_name":"Business Name",
+  "enter_business_name":"Enter business name",
+  "business_type":"Business Type",
+  "select_bus_ty":"Select business type",
+  "category":"Category",
+  "select_category":"Select category",
+  "business_tag":"Business Tag",
+  "select_tag":"Select tag",
+  "describe_about":"Describe about business...",
+  "describe_highlights":"Describe about highlights...",
+  "phone":"Phone Number",
+  "enter_phone":"Enter phone number",
+  "address":"Address",
+  "enter_busi_address":"Enter business location",
+  "website":"Website",
+  "enter_website":"Enter website",
+  "start_time":"Start Time",
+  "close_time":"Close Time",
+  "select_time":"Select time",
+  "business_cover":"Business Cover",
+  "upload_cover": "Upload Cover Photo",
+  "submit":"Submit",
+
+
+
+
+
+
+  // Login Screens
+
+  "logins": "Log in",
+  "email": "Email",
+  "password": "Password",
+  "forgot_password": "Forgot Password",
+  "logine": "Login",
+  "apple": "Continue with Apple",
+  "google": "Continue with Google",
+  "need_account": "Need an account",
+  "sing_up":"Sing up"
+
 };

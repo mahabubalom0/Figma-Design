@@ -18,22 +18,22 @@ class Job extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.backgroundLight,
-        leadingWidth: AppDimensions.paddingHUGEXX,
+        leadingWidth: getWidth(AppDimensions.paddingHUGEXX),
         leading: Padding(
-          padding: const EdgeInsets.only(left: AppDimensions.paddingL),
+          padding:  EdgeInsets.only(left: getWidth(AppDimensions.paddingL)),
           child: Container(
-            height: AppDimensions.paddingHUGEXXY,
-            width: AppDimensions.paddingHUGEXXY,
+            height: getHeight(AppDimensions.paddingHUGEXXY),
+            width: getWidth(AppDimensions.paddingHUGEXXY),
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               color: AppColors.elevatedSurfaceLight,
             ),
             child: Center(
               child: Padding(
-                padding: const EdgeInsets.only(left: AppDimensions.paddingM),
+                padding:  EdgeInsets.only(left: getWidth(AppDimensions.paddingM)),
                 child: Icon(
                   Icons.arrow_back_ios,
-                  size: AppDimensions.spaceXL,
+                  size: getHeight(AppDimensions.spaceXL),
                   color: AppColors.backgroundDark,
                 ),
               ),
@@ -44,7 +44,7 @@ class Job extends StatelessWidget {
           "Local Job",
           style: TextStyle(
             fontFamily: "Means",
-            fontSize: AppDimensions.fontXL,
+            fontSize: getSp(AppDimensions.fontXL),
             color: AppColors.backgroundDark,
           ),
         ),
@@ -61,7 +61,9 @@ class Job extends StatelessWidget {
                 Container(
                   height: 55,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(AppDimensions.radiusXXXL),
+                    borderRadius: BorderRadius.circular(
+                     getRadius( AppDimensions.radiusXXXL,)
+                    ),
                     color: AppColors.elevatedSurfaceLight,
                   ),
                   child: TextFormField(
@@ -70,18 +72,24 @@ class Job extends StatelessWidget {
                       hintStyle: GoogleFonts.dmSans(
                         color: AppColors.backgroundDark.withAlpha(170),
                       ),
-                      contentPadding: EdgeInsets.only(top: AppDimensions.paddingS, bottom: AppDimensions.paddingYS),
+                      contentPadding: EdgeInsets.only(
+                        top: getHeight(AppDimensions.paddingS),
+                        bottom: getHeight(AppDimensions.paddingYS),
+                      ),
                       prefixIconColor: AppColors.backgroundDark,
                       prefixIcon: Padding(
-                        padding: const EdgeInsets.only(left:AppDimensions.paddingXL , top:AppDimensions.paddingS ),
+                        padding:  EdgeInsets.only(
+                          left: getWidth(AppDimensions.paddingXL),
+                          top: getHeight(AppDimensions.paddingS),
+                        ),
                         child: CustomSvgIcon(
                           assetName: ImagePath.search,
                           color: AppColors.backgroundDark.withAlpha(200),
                         ),
                       ),
                       prefixIconConstraints: BoxConstraints(
-                        minWidth: AppDimensions.paddingXXXL,
-                        minHeight: AppDimensions.paddingXXXL,
+                        minWidth: getWidth(AppDimensions.paddingXXXL),
+                        minHeight: getHeight(AppDimensions.paddingXXXL),
                       ),
                       border: InputBorder.none,
                       enabledBorder: InputBorder.none,
@@ -93,14 +101,14 @@ class Job extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: AppDimensions.spaceM),
+                SizedBox(height: getHeight(AppDimensions.spaceM)),
                 ListView.builder(
                   physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   itemCount: controller.jobs.length,
                   itemBuilder: (context, index) {
                     return Padding(
-                      padding: const EdgeInsets.only(top:AppDimensions.fontXL),
+                      padding:  EdgeInsets.only(top: getHeight(AppDimensions.fontXL)),
                       child: designcontainer(
                         size,
                         index: index,
@@ -115,19 +123,23 @@ class Job extends StatelessWidget {
                             },
                             child: controller.favorite[index]
                                 ? Padding(
-                                    padding: const EdgeInsets.only(right:AppDimensions.radiusM),
+                                    padding:  EdgeInsets.only(
+                                      right: getWidth(AppDimensions.radiusM,)
+                                    ),
                                     child: Icon(
                                       Icons.favorite,
                                       color: Colors.red,
-                                      size: AppDimensions.radiusXXL,
+                                      size: getHeight(AppDimensions.radiusXXL,)
                                     ),
                                   )
                                 : Padding(
-                                    padding: const EdgeInsets.only(right: AppDimensions.radiusM),
+                                    padding:  EdgeInsets.only(
+                                      right:getWidth( AppDimensions.radiusM,)
+                                    ),
                                     child: CustomSvgIcon(
                                       assetName: ImagePath.heard,
-                                      width: 25,
-                                      height: 25,
+                                      width: getWidth(25),
+                                      height: getHeight(25),
                                       color: AppColors.backgroundDark.withAlpha(
                                         150,
                                       ),
@@ -159,11 +171,11 @@ class Job extends StatelessWidget {
       width: size.width,
       decoration: BoxDecoration(
         boxShadow: [BoxShadow(color: AppColors.backgroundLight.withAlpha(20))],
-        borderRadius: BorderRadius.circular(AppDimensions.radiusXL),
+        borderRadius: BorderRadius.circular(getRadius(AppDimensions.radiusXL)),
         color: AppColors.elevatedSurfaceLight,
       ),
       child: Padding(
-        padding: const EdgeInsets.all(AppDimensions.paddingXL),
+        padding:  EdgeInsets.all(getRadius(AppDimensions.paddingXL)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
@@ -172,13 +184,17 @@ class Job extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                CustomSvgIcon(assetName: image!, width: AppDimensions.ImageXXS, height: AppDimensions.ImageXXS),
+                CustomSvgIcon(
+                  assetName: image!,
+                  width: getWidth(AppDimensions.ImageXXS),
+                  height: getHeight(AppDimensions.ImageXXS),
+                ),
                 Spacer(),
                 icon!,
               ],
             ),
 
-            SizedBox(height: AppDimensions.spaceM),
+            SizedBox(height: getHeight(AppDimensions.spaceM)),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.start,
@@ -186,7 +202,7 @@ class Job extends StatelessWidget {
                 Text(
                   style: GoogleFonts.dmSans(
                     fontWeight: FontWeight.w600,
-                    fontSize: AppDimensions.fontXS,
+                    fontSize: getSp(AppDimensions.fontXS),
                     color: Color(0xff00171D),
                   ),
                   "$title! ",
@@ -217,7 +233,7 @@ class Job extends StatelessWidget {
                 fontFamily: "Means",
               ),
             ),
-            SizedBox(height: AppDimensions.paddingS,),
+            SizedBox(height: AppDimensions.paddingS),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -247,10 +263,10 @@ class Job extends StatelessWidget {
                 SizedBox(width: AppDimensions.spaceM),
                 Container(
                   padding: EdgeInsetsDirectional.only(
-                    top:AppDimensions.paddingYS,
+                    top: AppDimensions.paddingYS,
                     bottom: AppDimensions.paddingYS,
                     start: AppDimensions.paddingXS,
-                    end:AppDimensions.paddingXS,
+                    end: AppDimensions.paddingXS,
                   ),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(AppDimensions.iconXL),
@@ -271,10 +287,10 @@ class Job extends StatelessWidget {
                 SizedBox(width: AppDimensions.spaceM),
                 Container(
                   padding: EdgeInsetsDirectional.only(
-                    top:AppDimensions.paddingYS,
+                    top: AppDimensions.paddingYS,
                     bottom: AppDimensions.paddingYS,
                     start: AppDimensions.paddingXS,
-                    end:AppDimensions.paddingXS,
+                    end: AppDimensions.paddingXS,
                   ),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(AppDimensions.iconXL),
@@ -326,7 +342,9 @@ class Job extends StatelessWidget {
                       horizontal: AppDimensions.paddingL,
                     ),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(AppDimensions.paddingXXL),
+                      borderRadius: BorderRadius.circular(
+                        AppDimensions.paddingXXL,
+                      ),
                       color: index == 1 ? Color(0xFFffb100) : Color(0xff006778),
                     ),
                     child: Row(
@@ -367,7 +385,7 @@ class Job extends StatelessWidget {
       height: AppDimensions.inputHeight,
       width: double.infinity,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(AppDimensions.inputHeight),
+        borderRadius: BorderRadius.circular(getRadius(AppDimensions.inputHeight)),
         color: AppColors.elevatedSurfaceLight,
       ),
       child: TextFormField(

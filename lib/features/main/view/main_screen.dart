@@ -56,9 +56,9 @@ class MainScreen extends StatelessWidget {
               label: "Job",
             ),
             BottomNavigationBarItem(
-              icon: const Icon(Icons.home_rounded),
+              icon: const Icon(Icons.person),
               activeIcon: const Icon(Icons.home_rounded),
-              label: AppStrings.tabHome.tr,
+              label: AppStrings.login.tr,
             ),
             BottomNavigationBarItem(
               icon: const Icon(Icons.home_rounded),

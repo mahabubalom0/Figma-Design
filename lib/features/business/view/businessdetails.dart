@@ -18,8 +18,8 @@ class Businessdetails extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: AppDimensions.height250,
-              width: double.infinity,
+              height: getHeight(AppDimensions.height250),
+              width: getWidth(double.infinity),
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(ImagePath.caching),
@@ -59,7 +59,7 @@ class Businessdetails extends StatelessWidget {
                                   ),
                                   child: Icon(
                                     Icons.arrow_back_ios,
-                                    size: AppDimensions.spaceXL,
+                                    size: getHeight(AppDimensions.spaceXL),
                                     color: AppColors.backgroundDark.withAlpha(
                                       160,
                                     ),
@@ -175,9 +175,9 @@ class Businessdetails extends StatelessWidget {
                           child: Text(
                             "Restaurant",
                             style: GoogleFonts.dmSans(
-                              fontSize: AppDimensions.fontX,
+                              fontSize: getSp(AppDimensions.fontX),
                               fontWeight: FontWeight.w400,
-                              color: Color(0xFFBE4430),
+                              color:AppColors.errorLight,
                             ),
                           ),
                         ),
@@ -194,9 +194,9 @@ class Businessdetails extends StatelessWidget {
                           borderRadius: BorderRadius.circular(
                             getRadius(AppDimensions.radius32),
                           ),
-                          color: Color(0xFF4FBF6B).withAlpha(30),
+                          color: AppColors.boxcolor.withAlpha(30),
                           border: BoxBorder.all(
-                            color: Color(0xFF4FBF6B).withAlpha(100),
+                            color:AppColors.boxcolor.withAlpha(100),
                             width: getWidth(AppDimensions.weight1),
                           ),
                         ),
@@ -204,9 +204,9 @@ class Businessdetails extends StatelessWidget {
                           child: Text(
                             "Black-Owned",
                             style: GoogleFonts.dmSans(
-                              fontSize: AppDimensions.fontX,
+                              fontSize: getSp(AppDimensions.fontX),
                               fontWeight: FontWeight.w400,
-                              color: Color(0xFF008321),
+                              color:AppColors.boxcolor,
                             ),
                           ),
                         ),
@@ -221,7 +221,7 @@ class Businessdetails extends StatelessWidget {
                   SizedBox(height: getHeight(AppDimensions.paddingS)),
                   Text(
                     "1200 NW 6 Avenue, Jacksonville, FL",
-                    style: Textstyles().textL(fontsize: AppDimensions.fontL),
+                    style: Textstyles().textL(fontsize: getSp(AppDimensions.fontL)),
                   ),
 
                   SizedBox(height: getHeight(AppDimensions.padding23)),
@@ -253,7 +253,7 @@ class Businessdetails extends StatelessWidget {
                             Text(
                               "4.75",
                               style: Textstyles().smalltext(
-                                fontsize: AppDimensions.fontS,
+                                fontsize: getSp(AppDimensions.fontS),
                               ),
                             ),
                             SizedBox(height: getHeight(AppDimensions.weight6)),
@@ -264,29 +264,29 @@ class Businessdetails extends StatelessWidget {
                                   width: getWidth(AppDimensions.weight10),
                                   height: getHeight(AppDimensions.weight10),
                                 ),
-                                SizedBox(width: 2),
+                                SizedBox(width: getWidth(2)),
                                 CustomSvgIcon(
                                   assetName: ImagePath.star,
-                                  width: AppDimensions.weight10,
-                                  height: AppDimensions.height10,
+                                  width: getWidth(AppDimensions.weight10),
+                                  height: getHeight(AppDimensions.height10),
+                                ),
+                                SizedBox(width: getWidth(2)),
+                                CustomSvgIcon(
+                                  assetName: ImagePath.star,
+                                  width: getWidth(AppDimensions.weight10),
+                                  height: getHeight(AppDimensions.height10),
+                                ),
+                                SizedBox(width: getWidth(2)),
+                                CustomSvgIcon(
+                                  assetName: ImagePath.star,
+                                  width: getWidth(AppDimensions.weight10),
+                                  height:getHeight(AppDimensions.height10),
                                 ),
                                 SizedBox(width: 2),
                                 CustomSvgIcon(
                                   assetName: ImagePath.star,
-                                  width: AppDimensions.weight10,
-                                  height: AppDimensions.height10,
-                                ),
-                                SizedBox(width: 2),
-                                CustomSvgIcon(
-                                  assetName: ImagePath.star,
-                                  width: AppDimensions.weight10,
-                                  height: AppDimensions.height10,
-                                ),
-                                SizedBox(width: 2),
-                                CustomSvgIcon(
-                                  assetName: ImagePath.star,
-                                  width: AppDimensions.weight10,
-                                  height: AppDimensions.height10,
+                                  width:getWidth( AppDimensions.weight10),
+                                  height: getHeight(AppDimensions.height10),
                                 ),
                               ],
                             ),
@@ -299,7 +299,7 @@ class Businessdetails extends StatelessWidget {
                         Text(
                           AppStrings.guestFavourite.tr,
                           style: Textstyles().smalltext(
-                            fontsize: AppDimensions.fontS,
+                            fontsize:getSp( AppDimensions.fontS,)
                           ),
                           textAlign: TextAlign.center,
                         ),
@@ -314,13 +314,13 @@ class Businessdetails extends StatelessWidget {
                             Text(
                               "298",
                               style: Textstyles().smalltext(
-                                fontsize: AppDimensions.fontS,
+                                fontsize: getSp(AppDimensions.fontS),
                               ),
                             ),
                             Text(
                               "Reviews",
                               style: GoogleFonts.dmSans(
-                                fontSize: AppDimensions.fontX,
+                                fontSize:getSp( AppDimensions.fontX),
                                 color: AppColors.backgroundDark.withAlpha(160),
                               ),
                             ),
@@ -355,7 +355,7 @@ class Businessdetails extends StatelessWidget {
                         width: getWidth(AppDimensions.weight20),
                         height: getHeight(AppDimensions.weight20),
                       ),
-                      SizedBox(width: getWidth(AppDimensions.paddingXS)),
+                      SizedBox(width: getWidth(AppDimensions.padding10)),
                       Text("Now open until 23:30", style: Textstyles().textL()),
                       Spacer(),
                       Container(
@@ -366,14 +366,14 @@ class Businessdetails extends StatelessWidget {
                           right: getWidth(AppDimensions.padding14),
                         ),
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(0xFFFFB100),
-                          color: Color(0xFFFFB100),
+                          borderRadius: BorderRadius.circular(getRadius(AppDimensions.radius32)),
+                          color: AppColors.amabr,
                         ),
                         child: Center(
                           child: Text(
                             AppStrings.viewmore.tr,
                             style: GoogleFonts.dmSans(
-                              fontSize: AppDimensions.fontXS,
+                              fontSize: getSp(AppDimensions.fontXS),
                               color: AppColors.backgroundDark,
                             ),
                           ),
@@ -439,7 +439,7 @@ class Businessdetails extends StatelessWidget {
                       child: Text(
                         AppStrings.editBusiness.tr,
                         style: GoogleFonts.plusJakartaSans(
-                          fontSize: AppDimensions.fontM,
+                          fontSize: getSp(AppDimensions.fontM),
                           fontWeight: FontWeight.w600,
                           color: AppColors.elevatedSurfaceLight,
                         ),
@@ -460,7 +460,7 @@ class Businessdetails extends StatelessWidget {
                       child: Text(
                         AppStrings.deleteBusiness.tr,
                         style: GoogleFonts.plusJakartaSans(
-                          fontSize: AppDimensions.fontM,
+                          fontSize: getSp(AppDimensions.fontM),
                           fontWeight: FontWeight.w600,
                           color: AppColors.backgroundDark,
                         ),

@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import '../../../core/core.dart';
-import '../../../core/theme/app_colors.dart';
-import '../../../core/theme/app_dimensions.dart';
 import '../../../core/utils/app_images.dart';
 import '../../../core/utils/textstyle.dart';
 import '../../../core/widgets/custom_svg_icon.dart';
@@ -37,7 +34,7 @@ class Businesspage extends StatelessWidget {
                   ),
                   child: Icon(
                     Icons.arrow_back_ios,
-                    size: AppDimensions.spaceXL,
+                    size: getHeight(AppDimensions.spaceXL),
                     color: AppColors.backgroundDark,
                   ),
                 ),
@@ -58,9 +55,9 @@ class Businesspage extends StatelessWidget {
               width: getWidth(AppDimensions.weight45),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: Color(0xFF006778),
+                color: AppColors.buttoncolor,
               ),
-              child: Center(child: Icon(Icons.add, size: AppDimensions.icon24)),
+              child: Center(child: Icon(Icons.add, size: getHeight(AppDimensions.icon24))),
             ),
           ),
         ],
@@ -118,8 +115,8 @@ class Businesspage extends StatelessWidget {
                             child: Center(
                               child: CustomSvgIcon(
                                 assetName: ImagePath.heardbold,
-                                height: AppDimensions.height20,
-                                width: AppDimensions.weight20,
+                                height: getHeight(AppDimensions.height20),
+                                width: getWidth(AppDimensions.weight20),
                                 color: AppColors.backgroundDark,
                               ),
                             ),
@@ -156,7 +153,7 @@ class Businesspage extends StatelessWidget {
                                   assetName: ImagePath.clock,
                                   width: getWidth(AppDimensions.weight14),
                                   height: getHeight(AppDimensions.height14),
-                                  color: Colors.black,
+                                  color:AppColors.backgroundDark,
                                 ),
                                 SizedBox(
                                   width: getWidth(AppDimensions.padding10),
@@ -164,7 +161,7 @@ class Businesspage extends StatelessWidget {
                                 Text(
                                   "Open at 12 pm",
                                   style: GoogleFonts.dmSans(
-                                    fontSize: AppDimensions.fontXS,
+                                    fontSize: getSp(AppDimensions.fontX),
                                     color: AppColors.backgroundDark,
                                     fontWeight: FontWeight.w400,
                                   ),
@@ -194,7 +191,7 @@ class Businesspage extends StatelessWidget {
                             "Locally roasted coffee, artisan pastries, and cozy vibes in the heart of Riverside.",
                             style: GoogleFonts.dmSans(
                               fontSize: AppDimensions.fontXS,
-                              color: Color(0xFF00171D).withAlpha(150),
+                              color: AppColors.backgroundDark.withAlpha(150),
                               fontWeight: FontWeight.w400,
                             ),
                           ),
@@ -210,8 +207,8 @@ class Businesspage extends StatelessWidget {
                               Text(
                                 "1200 NW 6 Avenue, Jacksonville, FL",
                                 style: GoogleFonts.dmSans(
-                                  fontSize: AppDimensions.fontXS,
-                                  color: Color(0xFF00171D).withAlpha(160),
+                                  fontSize: getSp(AppDimensions.fontXS),
+                                  color: AppColors.backgroundDark.withAlpha(160),
                                   fontWeight: FontWeight.w400,
                                 ),
                               ),
@@ -311,8 +308,8 @@ class Businesspage extends StatelessWidget {
                               Text(
                                 "Open at 8 pm",
                                 style: GoogleFonts.dmSans(
-                                  fontSize: AppDimensions.fontXS,
-                                  color: AppColors.backgroundDark,
+                                  fontSize: getSp(AppDimensions.fontX),
+                                  color: AppColors.backgroundDark.withValues(alpha: 0.8),
                                   fontWeight: FontWeight.w400,
                                 ),
                               ),
@@ -340,7 +337,7 @@ class Businesspage extends StatelessWidget {
                         Text(
                           "Mindful yoga classes for all levels. Drop-in welcome. First class free.",
                           style: GoogleFonts.dmSans(
-                            fontSize: AppDimensions.fontXS,
+                            fontSize: getSp(AppDimensions.fontXS),
                             color: AppColors.backgroundDark.withAlpha(150),
                             fontWeight: FontWeight.w400,
                           ),
@@ -350,14 +347,14 @@ class Businesspage extends StatelessWidget {
                           children: [
                             CustomSvgIcon(
                               assetName: ImagePath.Location,
-                              height: AppDimensions.height14,
-                              width: AppDimensions.weight14,
+                              height: getHeight(AppDimensions.height14),
+                              width: getWidth(AppDimensions.weight14),
                             ),
-                            SizedBox(width: 5),
+                            SizedBox(width: getWidth(5)),
                             Text(
                               "1200 NW 6 Avenue, Jacksonville, FL",
                               style: GoogleFonts.dmSans(
-                                fontSize: AppDimensions.fontXS,
+                                fontSize: getSp(AppDimensions.fontXS),
                                 color: AppColors.backgroundDark.withAlpha(160),
                                 fontWeight: FontWeight.w400,
                               ),
@@ -384,13 +381,13 @@ class Businesspage extends StatelessWidget {
   }) {
     return Container(
       padding: EdgeInsetsGeometry.only(
-        top: AppDimensions.paddingXS,
-        right: AppDimensions.paddingS,
-        left: AppDimensions.paddingS,
-        bottom: AppDimensions.paddingXS,
+        top: getHeight(AppDimensions.paddingYS),
+        right: getWidth(AppDimensions.paddingSX),
+        left: getWidth(AppDimensions.paddingSX),
+        bottom: getHeight(AppDimensions.paddingYS),
       ),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(getRadius(AppDimensions.radius32)),
+        borderRadius: BorderRadius.circular(getRadius(AppDimensions.radiusM)),
         color: boxcolor,
         border: BoxBorder.all(color: bordercolor!),
       ),
@@ -398,7 +395,7 @@ class Businesspage extends StatelessWidget {
         child: Text(
           text!,
           style: GoogleFonts.dmSans(
-            fontSize: AppDimensions.fontX,
+            fontSize: getSp(AppDimensions.fontX),
             fontWeight: FontWeight.w400,
             color: textcolor,
           ),

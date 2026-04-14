@@ -74,7 +74,7 @@ class NetworkCaller {
 
   Future<void> _logout() async {
     await _storage.clearAuth();
-    Get.offAllNamed(AppRoutes.login); // ✅ Navigate to login after clearing
+    // Get.offAllNamed(AppRoutes.login); // ✅ Navigate to login after clearing
   }
 
   // ─── Connectivity Check ───────────────────────────────────────────────────

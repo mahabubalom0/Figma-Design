@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../../../core/theme/app_colors.dart';
-import '../../../core/theme/app_dimensions.dart';
+import '../../../core/core.dart';
 import '../../../core/utils/app_images.dart';
 import '../../../core/utils/textstyle.dart';
 import '../../../core/widgets/TextFiled.dart';
@@ -19,27 +17,28 @@ class Addbussinessfrome extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        leadingWidth: AppDimensions.weight80,
+        leadingWidth: getWidth(AppDimensions.weight80),
         leading: Padding(
-          padding: const EdgeInsets.only(left: AppDimensions.padding16),
+          padding: EdgeInsets.only(left: getWidth(AppDimensions.padding16)),
           child: GestureDetector(
-
-            onTap: (){
+            onTap: () {
               Get.back();
             },
             child: Container(
-              height: AppDimensions.height45,
-              width:  AppDimensions.weight45,
+              height: getHeight(AppDimensions.height45),
+              width: getWidth(AppDimensions.weight45),
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: AppColors.elevatedSurfaceLight,
               ),
               child: Center(
                 child: Padding(
-                  padding: const EdgeInsets.only(left: AppDimensions.padding10),
+                  padding: EdgeInsets.only(
+                    left: getWidth(AppDimensions.padding10),
+                  ),
                   child: Icon(
                     Icons.arrow_back_ios,
-                    size: AppDimensions.spaceXL,
+                    size: getHeight(AppDimensions.spaceXL),
                     color: AppColors.backgroundDark.withAlpha(190),
                   ),
                 ),
@@ -47,137 +46,143 @@ class Addbussinessfrome extends StatelessWidget {
             ),
           ),
         ),
-        title: Text("Add Business", style: Textstyles().medialtext()),
+        title: Text(
+          AppStrings.addbusiness.tr,
+          style: Textstyles().medialtext(),
+        ),
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(
-            left: AppDimensions.padding18,
-            right: AppDimensions.padding18,
-            bottom: AppDimensions.padding36,
-            top: AppDimensions.padding36,
+          padding: EdgeInsets.only(
+            left: getWidth(AppDimensions.padding18),
+            right: getWidth(AppDimensions.padding18),
+            bottom: getHeight(AppDimensions.padding36),
+            top: getHeight(AppDimensions.padding36),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Custometextfiled(
-                titletextc: "Business Name",
-                hintText: "Enter business name",
+                titletextc: AppStrings.business_name.tr,
+                hintText: AppStrings.enter_business_name.tr,
                 suffixIcon: CustomSvgIcon(
                   assetName: ImagePath.store,
-                  width: AppDimensions.weight20,
-                  height: AppDimensions.height20,
+                  width: getWidth(AppDimensions.weight20),
+                  height: getHeight(AppDimensions.weight20),
                 ),
               ),
-              SizedBox(height: AppDimensions.paddingM),
+              SizedBox(height: getHeight(AppDimensions.paddingM)),
               Custometextfiled(
-                titletextc: "Business Type",
-                hintText: "Select business type",
+                titletextc: AppStrings.business_type.tr,
+                hintText: AppStrings.select_bus_ty.tr,
                 suffixIcon: Icon(
                   Icons.keyboard_arrow_down_outlined,
                   color: AppColors.backgroundDark.withAlpha(160),
                 ),
               ),
-              SizedBox(height: AppDimensions.paddingM),
+              SizedBox(height: getHeight(AppDimensions.paddingM)),
               Custometextfiled(
-                titletextc: "Category",
-                hintText: "Select category",
+                titletextc: AppStrings.category.tr,
+                hintText: AppStrings.select_category.tr,
                 suffixIcon: Icon(
                   Icons.keyboard_arrow_down_outlined,
                   color: AppColors.backgroundDark.withAlpha(160),
                 ),
               ),
-              SizedBox(height: AppDimensions.paddingM),
+              SizedBox(height: getHeight(AppDimensions.paddingM)),
               Custometextfiled(
-                titletextc: "Business Tag",
-                hintText: "Select tag",
+                titletextc: AppStrings.business_tag.tr,
+                hintText: AppStrings.select_tag.tr,
                 suffixIcon: Icon(
                   Icons.keyboard_arrow_down_outlined,
                   color: AppColors.backgroundDark.withAlpha(160),
                 ),
               ),
-              SizedBox(height: AppDimensions.paddingXL),
+              SizedBox(height: getHeight(AppDimensions.paddingXL)),
               TextFileds(
-                titletextc: "About",
-                hintText: "Describe about business...",
+                titletextc: AppStrings.about.tr,
+                hintText: AppStrings.describe_about.tr,
               ),
-              SizedBox(height: AppDimensions.paddingXL),
+              SizedBox(height: getHeight(AppDimensions.paddingXL)),
               TextFileds(
-                titletextc: "Highlights",
-                hintText: "Describe about highlights...",
+                titletextc: AppStrings.highlights.tr,
+                hintText: AppStrings.describe_highlights.tr,
               ),
-              SizedBox(height: AppDimensions.paddingXL),
+              SizedBox(height: getHeight(AppDimensions.paddingXL)),
               Custometextfiled(
-                titletextc: "Phone Number",
-                hintText: "Enter phone number",
+                titletextc: AppStrings.phone.tr,
+                hintText: AppStrings.enter_phone.tr,
                 suffixIcon: CustomSvgIcon(
                   assetName: ImagePath.call,
-                  width: AppDimensions.height20,
-                  height: AppDimensions.weight20,
+                  width: getWidth(AppDimensions.height20),
+                  height: getHeight(AppDimensions.weight20),
                 ),
               ),
-              SizedBox(height: AppDimensions.paddingXL),
+              SizedBox(height: getHeight(AppDimensions.paddingXL)),
               Custometextfiled(
-                titletextc: "Address",
-                hintText: "Enter business location",
+                titletextc: AppStrings.address.tr,
+                hintText: AppStrings.enter_busi_address.tr,
                 suffixIcon: CustomSvgIcon(
                   assetName: ImagePath.Location,
-                  height: AppDimensions.height20,
-                  width: AppDimensions.weight20,
+                  height: getHeight(AppDimensions.height20),
+                  width: getWidth(AppDimensions.weight20),
                   color: AppColors.backgroundDark.withAlpha(160),
                 ),
               ),
-              SizedBox(height: AppDimensions.padding14),
+              SizedBox(height: getHeight(AppDimensions.padding14)),
               Custometextfiled(
-                titletextc: "Website",
-                hintText: "Enter website",
+                titletextc: AppStrings.website.tr,
+                hintText: AppStrings.enter_website.tr,
                 suffixIcon: CustomSvgIcon(
                   assetName: ImagePath.word,
-                  height: AppDimensions.height20,
-                  width: AppDimensions.weight20,
+                  height: getHeight(AppDimensions.height20),
+                  width: getWidth(AppDimensions.weight20),
                   color: AppColors.backgroundDark.withAlpha(160),
                 ),
               ),
-              SizedBox(height: AppDimensions.padding14),
+              SizedBox(height: getHeight(AppDimensions.padding14)),
               Row(
                 children: [
                   Expanded(
                     child: Custometextfiled(
-                      titletextc: "Start Time",
-                      hintText: "Select time",
+                      titletextc: AppStrings.start_time.tr,
+                      hintText: AppStrings.select_time.tr,
                       suffixIcon: CustomSvgIcon(
                         assetName: ImagePath.time,
-                        height: AppDimensions.paddingXL,
-                        width: AppDimensions.paddingXL,
+                        height: getHeight(AppDimensions.paddingXL),
+                        width: getWidth(AppDimensions.paddingXL),
                       ),
                     ),
                   ),
-                  SizedBox(width: 13),
+                  SizedBox(width: getWidth(13)),
                   Expanded(
                     child: Custometextfiled(
-                      titletextc: "Close Time",
-                      hintText: "Select time",
+                      titletextc: AppStrings.close_time.tr,
+                      hintText: AppStrings.select_time.tr,
                       suffixIcon: CustomSvgIcon(
                         assetName: ImagePath.time,
-                        height: AppDimensions.paddingXL,
-                        width: AppDimensions.paddingXL,
+                        height: getHeight(AppDimensions.paddingXL),
+                        width: getWidth(AppDimensions.paddingXL),
                       ),
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: AppDimensions.padding14),
+              SizedBox(height: getHeight(AppDimensions.padding14)),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Business Cover", style: Textstyles().textL()),
-                  SizedBox(height: AppDimensions.paddingM),
+                  Text(
+                    AppStrings.business_cover.tr,
+                    style: Textstyles().textL(),
+                  ),
+                  SizedBox(height: getHeight(AppDimensions.paddingM)),
                   Container(
-                    height: AppDimensions.height144,
-                    width: double.infinity,
+                    height: getHeight(AppDimensions.height144),
+                    width: getWidth(double.infinity),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
-                      color: Color(0xFFFFFFFF),
+                      borderRadius: BorderRadius.circular(getRadius(AppDimensions.radiusXL)),
+                      color: AppColors.elevatedSurfaceLight,
                     ),
                     child: Center(
                       child: Column(
@@ -185,14 +190,14 @@ class Addbussinessfrome extends StatelessWidget {
                         children: [
                           CustomSvgIcon(
                             assetName: ImagePath.month,
-                            height: AppDimensions.weight45,
-                            width: AppDimensions.weight45,
+                            height: getHeight(AppDimensions.weight45),
+                            width: getWidth(AppDimensions.weight45),
                           ),
-                          SizedBox(height: AppDimensions.padding14),
+                          SizedBox(height: getHeight(AppDimensions.padding14)),
                           Text(
-                            "Upload Cover Photo",
+                            AppStrings.upload_cover.tr,
                             style: GoogleFonts.dmSans(
-                              fontSize: AppDimensions.fontXS,
+                              fontSize: getSp(AppDimensions.fontXS),
                               fontWeight: FontWeight.w400,
                             ),
                           ),
@@ -200,21 +205,23 @@ class Addbussinessfrome extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: AppDimensions.padding26),
+                  SizedBox(height: getHeight(AppDimensions.padding26)),
                   GestureDetector(
                     onTap: () => Get.toNamed(AppRoutes.businesspage),
                     child: Container(
-                      height: AppDimensions.weight45,
-                      width: double.infinity,
+                      height: getHeight(AppDimensions.weight45),
+                      width: getWidth(double.infinity),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(32),
-                        color: Color(0xFF006778),
+                        borderRadius: BorderRadius.circular(
+                          getRadius(AppDimensions.radius32),
+                        ),
+                        color: AppColors.buttoncolor,
                       ),
                       child: Center(
                         child: Text(
-                          "Submit",
+                          AppStrings.submit.tr,
                           style: GoogleFonts.plusJakartaSans(
-                            fontSize: AppDimensions.fontM,
+                            fontSize: getSp(AppDimensions.fontM),
                             fontWeight: FontWeight.w600,
                             color: AppColors.backgroundLight,
                           ),
@@ -222,7 +229,7 @@ class Addbussinessfrome extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: AppDimensions.paddingL,)
+                  SizedBox(height: getHeight(AppDimensions.paddingL)),
                 ],
               ),
             ],

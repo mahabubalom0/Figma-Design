@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
+import '../../auth/login/view/login_screen.dart';
 import '../../business/view/addbusiness.dart';
 import '../../home/view/home_screen.dart';
 import '../../job/view/job.dart';
@@ -14,7 +15,7 @@ class MainController extends GetxController {
   final List<Widget> screens = [
     const Addbusiness(),
     const Job(),
-    const HomeScreen(),
+    const LoginScreen(),
     const HomeScreen(),
     const ProfileScreen(),
   ];

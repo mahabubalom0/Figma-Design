@@ -87,12 +87,52 @@ class AppStrings {
   static const String mylist = "myList";
   static const String jacksonvilleYogaStudio = "jacksonvilleYogaStudio";
 
-// business splash screens
+  // business splash screens
+
+  static const String listBusiness = "list_your_business";
+  static const String stating = "stating";
+  static const String get_start = "get_start";
 
 
-static const String listBusiness = "list_your_business";
-static const String stating = "stating";
-static const String get_start = "get_start";
+  //business form screens
+  static const String addbusiness="add_business";
+  static const String business_name="business_name";
+  static const String enter_business_name="enter_business_name";
+  static const String business_type="business_type";
+  static const String select_bus_ty="select_bus_ty";
+  static const String category="category";
+  static const String select_category="select_category";
+  static const String business_tag="business_tag";
+  static const String select_tag="select_tag";
+  static const String describe_about="describe_about";
+  static const String describe_highlights="describe_highlights";
+  static const String phone="phone";
+  static const String enter_phone="enter_phone";
+  static const String address="address";
+  static const String enter_busi_address="enter_busi_address";
+  static const String website="website";
+  static const String enter_website="enter_website";
+  static const String start_time="start_time";
+  static const String close_time="close_time";
+  static const String select_time="select_time";
+  static const String business_cover="business_cover";
+  static const String upload_cover="upload_cover";
+  static const String submit="submit";
 
 
+
+
+
+
+  //Login Screens
+
+  static const String logins = "logins";
+  static const String email = "email";
+  static const String password = "password";
+  static const String forgot_password = "forgot_password";
+  static const String logine = "logine";
+  static const String apple = "apple";
+  static const String google = "google";
+  static const String need_account = "need_account";
+  static const String sing_up = "sing_up";
 }

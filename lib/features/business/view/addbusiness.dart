@@ -7,7 +7,6 @@ import '../../../core/theme/app_colors.dart';
 import '../../../core/theme/app_dimensions.dart';
 import '../../../core/utils/app_images.dart';
 import '../../../core/utils/textstyle.dart';
-import '../../../core/widgets/custom_svg_icon.dart';
 import '../../../routes/app_routes.dart';
 
 class Addbusiness extends StatelessWidget {
@@ -19,7 +18,7 @@ class Addbusiness extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         leading: Padding(
-          padding: const EdgeInsets.only(left: AppDimensions.paddingL),
+          padding:  EdgeInsets.only(left: getWidth(AppDimensions.paddingL)),
           child: Container(
             height: getHeight(AppDimensions.weight45),
             width: getWidth(AppDimensions.weight45),
@@ -34,17 +33,17 @@ class Addbusiness extends StatelessWidget {
                 ),
                 child: Icon(
                   Icons.arrow_back_ios,
-                  size: AppDimensions.spaceXL,
+                  size: getHeight(AppDimensions.spaceXL),
                   color: AppColors.backgroundDark.withAlpha(150),
                 ),
               ),
             ),
           ),
         ),
-        title: Text("Add Business", style: Textstyles().medialtext()),
+        title: Text(AppStrings.addbusiness.tr, style: Textstyles().medialtext()),
       ),
       body: Container(
-        width: double.infinity,
+        width: getWidth(double.infinity),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
