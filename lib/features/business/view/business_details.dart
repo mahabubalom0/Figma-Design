@@ -430,28 +430,19 @@ class Businessdetails extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: getHeight(AppDimensions.padding30)),
-                  Container(
-                    height: getHeight(AppDimensions.height45),
-                    width: getWidth(double.infinity),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(
-                        AppDimensions.radiusYYLX,
-                      ),
-                      color: AppColors.buttoncolor,
-                    ),
-                    child: Center(
-                      child: Text(
-                        AppStrings.editBusiness.tr,
-                        style: GoogleFonts.plusJakartaSans(
-                          fontSize: getSp(AppDimensions.fontM),
-                          fontWeight: FontWeight.w600,
-                          color: AppColors.elevatedSurfaceLight,
-                        ),
-                      ),
-                    ),
+                  CustomButton(
+                    isClip: true,
+                    fontFamily: true,
+                    textColor: AppColors.elevatedSurfaceLight,
+                    color: AppColors.buttoncolor,
+                    buttonSize: getHeight(AppDimensions.height45),
+                    text: AppStrings.editBusiness.tr,
+                    onPressed: () {},
                   ),
+
                   SizedBox(height: getHeight(AppDimensions.padding16)),
                   CustomButton(
+                    buttonSize: getHeight(AppDimensions.height45),
                     color: AppColors.backgroundDark.withAlpha(20),
                     isClip: true,
                     text: AppStrings.deleteBusiness.tr,

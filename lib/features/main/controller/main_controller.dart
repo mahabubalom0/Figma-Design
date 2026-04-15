@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 
 import '../../auth/login/view/login_screen.dart';
-import '../../business/view/addbusiness.dart';
+import '../../business/view/add_business.dart';
 import '../../home/view/home_screen.dart';
 import '../../job/view/job.dart';
 import '../../profile/view/profile_screen.dart';

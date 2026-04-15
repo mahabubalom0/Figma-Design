@@ -7,11 +7,11 @@ import 'package:file_uploader/features/auth/login/view/login_screen.dart';
 import 'package:file_uploader/features/main/view/main_screen.dart';
 import 'package:file_uploader/features/home/view/home_screen.dart';
 
-import '../features/business/view/addbusiness.dart';
-import '../features/business/view/addbussinessfrome.dart';
-import '../features/business/view/businessdetails.dart';
-import '../features/business/view/businesspage.dart';
-import '../features/job/view/jobdeatiles.dart';
+import '../features/business/view/add_business.dart';
+import '../features/business/view/add_bussiness_frome.dart';
+import '../features/business/view/business_details.dart';
+import '../features/business/view/business_page.dart';
+import '../features/job/view/job_deatiles.dart';
 import '../features/job/view/job.dart';
 
 class AppPages {

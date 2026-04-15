@@ -65,9 +65,9 @@ flutter:
          - asset: assets/fonts/Means-Light-Web121f5d6.ttf
            style: normal
 fonts:
-      - family: MeansLight
+      - family: satoshi
         fonts:
-         - asset: assets/fonts/Means-Light-Web121f5d6.ttf
+         - asset: assets/fonts/satoshi_medium.otf
            style: normal
 
 

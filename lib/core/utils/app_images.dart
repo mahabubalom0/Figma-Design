@@ -38,6 +38,8 @@ class ImagePath {
   static const String home = '${asset}Home stroke.svg';
   static const String store2 = '${asset}Store (2).svg';
   static const String userfill = '${asset}User Fill.svg';
+  static const String password = '${asset}Password Icon (1).svg';
+  static const String email = '${asset}email.svg';
 
 
   // Add other PNG/JPG image names below:

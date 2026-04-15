@@ -63,6 +63,7 @@ class AppDimensions {
   static const double iconL = 24.0;
   static const double iconXL = 32.0;
   static const double iconXXL = 40.0;
+  static const double icon24=24.0;
 
   // ─── Component Specific ────────────────────────────────────────────────────
   static const double buttonHeight = 52.0;
@@ -76,6 +77,7 @@ class AppDimensions {
   static const double borderWidthThin = 0.5;
   static const double borderWidthMedium = 1.0;
   static const double borderWidthThick = 1.5;
+  static const double borderWidth1_25= 1.25;
   static const double borderWidthExtraThick = 3.0;
 
   // ─── Skeleton Specific ─────────────────────────────────────────────────────
@@ -115,6 +117,9 @@ class AppDimensions {
   static const double weight72 = 72.0;
   static const double weight80 = 80.0;
   static const double weight10 = 10.0;
+
+
+  //height
   static const double height144 = 144.0;
   static const double height20 = 20.0;
   static const double height22= 22.0;
@@ -135,5 +140,14 @@ class AppDimensions {
 
   // icons size
 
-static const double icon24=24.0;
+
+//content padding
+
+static const double content5=5.0;
+static const double content10=10.0;
+static const double content2=2.0;
+static const double content15=15.0;
+static const double content20=20.0;
+
+
 }

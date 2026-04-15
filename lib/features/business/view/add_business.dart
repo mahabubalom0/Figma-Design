@@ -18,7 +18,7 @@ class Addbusiness extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         leading: Padding(
-          padding:  EdgeInsets.only(left: getWidth(AppDimensions.paddingL)),
+          padding: EdgeInsets.only(left: getWidth(AppDimensions.paddingL)),
           child: Container(
             height: getHeight(AppDimensions.weight45),
             width: getWidth(AppDimensions.weight45),
@@ -40,7 +40,10 @@ class Addbusiness extends StatelessWidget {
             ),
           ),
         ),
-        title: Text(AppStrings.addbusiness.tr, style: Textstyles().medialtext()),
+        title: Text(
+          AppStrings.addbusiness.tr,
+          style: Textstyles().medialtext(),
+        ),
       ),
       body: Container(
         width: getWidth(double.infinity),
@@ -81,14 +84,15 @@ class Addbusiness extends StatelessWidget {
                 right: getWidth(AppDimensions.radius92),
               ),
               child: CustomButton(
-
-                color:  AppColors.buttoncolor,
-                  fontFamily: true,
-                  textColor: AppColors.backgroundLight,
-                  isClip: true,
-                  text: AppStrings.get_start.tr, onPressed: (){
-                Get.toNamed(AppRoutes.businesspage);
-              })
+                color: AppColors.buttoncolor,
+                fontFamily: true,
+                textColor: AppColors.backgroundLight,
+                isClip: true,
+                text: AppStrings.get_start.tr,
+                onPressed: () {
+                  Get.toNamed(AppRoutes.businesspage);
+                },
+              ),
             ),
           ],
         ),

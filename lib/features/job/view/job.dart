@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../core/core.dart';
 import '../../../core/utils/app_images.dart';
 import '../../../core/widgets/custom_svg_icon.dart';
-import 'jobdeatiles.dart';
+import 'job_deatiles.dart';
 import '../controller/controller.dart';
 
 class Job extends StatelessWidget {
