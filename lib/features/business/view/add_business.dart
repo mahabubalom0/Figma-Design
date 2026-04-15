@@ -80,27 +80,15 @@ class Addbusiness extends StatelessWidget {
                 left: getWidth(AppDimensions.radius92),
                 right: getWidth(AppDimensions.radius92),
               ),
-              child: GestureDetector(
-                onTap: () => Get.toNamed(AppRoutes.businesspage),
-                child: Container(
-                  height: getHeight(AppDimensions.weight45),
-                  decoration: BoxDecoration(
-                    color: AppColors.buttoncolor,
-                    borderRadius: BorderRadius.circular(AppDimensions.radius32),
-                  ),
+              child: CustomButton(
 
-                  child: Center(
-                    child: Text(
-                      AppStrings.get_start.tr,
-                      style: GoogleFonts.plusJakartaSans(
-                        fontSize: AppDimensions.fontM,
-                        color: AppColors.backgroundLight,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+                color:  AppColors.buttoncolor,
+                  fontFamily: true,
+                  textColor: AppColors.backgroundLight,
+                  isClip: true,
+                  text: AppStrings.get_start.tr, onPressed: (){
+                Get.toNamed(AppRoutes.businesspage);
+              })
             ),
           ],
         ),

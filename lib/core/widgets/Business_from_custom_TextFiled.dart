@@ -4,12 +4,12 @@ import '../theme/theme.dart';
 import '../utils/textstyle.dart';
 
 class Custometextfiled extends StatelessWidget {
-  final String titletextc;
+  final String? titletextc;
   final String hintText;
   final Widget suffixIcon;
   const Custometextfiled({
     super.key,
-    required this.titletextc,
+    this.titletextc,
     required this.hintText,
     required this.suffixIcon,
   });
@@ -23,7 +23,7 @@ class Custometextfiled extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(titletextc, style: Textstyles().textL()),
+          Text(titletextc!, style: Textstyles().textL()),
           SizedBox(height: 8),
           Container(
             height: 45,
@@ -55,7 +55,7 @@ class Custometextfiled extends StatelessWidget {
                 focusedBorder: InputBorder.none,
               ),
             ),
-          )
+          ),
         ],
       ),
     );

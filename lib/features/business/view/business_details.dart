@@ -167,7 +167,7 @@ class Businessdetails extends StatelessWidget {
                           ),
                           color: AppColors.errorDark.withAlpha(30),
                           border: BoxBorder.all(
-                            color:AppColors.errorDark.withAlpha(100),
+                            color: AppColors.errorDark.withAlpha(100),
                             width: AppDimensions.weight1,
                           ),
                         ),
@@ -177,7 +177,7 @@ class Businessdetails extends StatelessWidget {
                             style: GoogleFonts.dmSans(
                               fontSize: getSp(AppDimensions.fontX),
                               fontWeight: FontWeight.w400,
-                              color:AppColors.errorLight,
+                              color: AppColors.errorLight,
                             ),
                           ),
                         ),
@@ -196,7 +196,7 @@ class Businessdetails extends StatelessWidget {
                           ),
                           color: AppColors.boxcolor.withAlpha(30),
                           border: BoxBorder.all(
-                            color:AppColors.boxcolor.withAlpha(100),
+                            color: AppColors.boxcolor.withAlpha(100),
                             width: getWidth(AppDimensions.weight1),
                           ),
                         ),
@@ -206,7 +206,7 @@ class Businessdetails extends StatelessWidget {
                             style: GoogleFonts.dmSans(
                               fontSize: getSp(AppDimensions.fontX),
                               fontWeight: FontWeight.w400,
-                              color:AppColors.boxcolor,
+                              color: AppColors.boxcolor,
                             ),
                           ),
                         ),
@@ -221,7 +221,9 @@ class Businessdetails extends StatelessWidget {
                   SizedBox(height: getHeight(AppDimensions.paddingS)),
                   Text(
                     "1200 NW 6 Avenue, Jacksonville, FL",
-                    style: Textstyles().textL(fontsize: getSp(AppDimensions.fontL)),
+                    style: Textstyles().textL(
+                      fontsize: getSp(AppDimensions.fontL),
+                    ),
                   ),
 
                   SizedBox(height: getHeight(AppDimensions.padding23)),
@@ -280,12 +282,12 @@ class Businessdetails extends StatelessWidget {
                                 CustomSvgIcon(
                                   assetName: ImagePath.star,
                                   width: getWidth(AppDimensions.weight10),
-                                  height:getHeight(AppDimensions.height10),
+                                  height: getHeight(AppDimensions.height10),
                                 ),
                                 SizedBox(width: 2),
                                 CustomSvgIcon(
                                   assetName: ImagePath.star,
-                                  width:getWidth( AppDimensions.weight10),
+                                  width: getWidth(AppDimensions.weight10),
                                   height: getHeight(AppDimensions.height10),
                                 ),
                               ],
@@ -299,7 +301,7 @@ class Businessdetails extends StatelessWidget {
                         Text(
                           AppStrings.guestFavourite.tr,
                           style: Textstyles().smalltext(
-                            fontsize:getSp( AppDimensions.fontS,)
+                            fontsize: getSp(AppDimensions.fontS),
                           ),
                           textAlign: TextAlign.center,
                         ),
@@ -320,7 +322,7 @@ class Businessdetails extends StatelessWidget {
                             Text(
                               "Reviews",
                               style: GoogleFonts.dmSans(
-                                fontSize:getSp( AppDimensions.fontX),
+                                fontSize: getSp(AppDimensions.fontX),
                                 color: AppColors.backgroundDark.withAlpha(160),
                               ),
                             ),
@@ -366,7 +368,9 @@ class Businessdetails extends StatelessWidget {
                           right: getWidth(AppDimensions.padding14),
                         ),
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(getRadius(AppDimensions.radius32)),
+                          borderRadius: BorderRadius.circular(
+                            getRadius(AppDimensions.radius32),
+                          ),
                           color: AppColors.amabr,
                         ),
                         child: Center(
@@ -447,25 +451,13 @@ class Businessdetails extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: getHeight(AppDimensions.padding16)),
-                  Container(
-                    height: getHeight(AppDimensions.height45),
-                    width: getWidth(double.infinity),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(
-                        getRadius(AppDimensions.radius32),
-                      ),
-                      color: AppColors.backgroundDark.withAlpha(20),
-                    ),
-                    child: Center(
-                      child: Text(
-                        AppStrings.deleteBusiness.tr,
-                        style: GoogleFonts.plusJakartaSans(
-                          fontSize: getSp(AppDimensions.fontM),
-                          fontWeight: FontWeight.w600,
-                          color: AppColors.backgroundDark,
-                        ),
-                      ),
-                    ),
+                  CustomButton(
+                    color: AppColors.backgroundDark.withAlpha(20),
+                    isClip: true,
+                    text: AppStrings.deleteBusiness.tr,
+                    onPressed: () {},
+                    textColor: AppColors.backgroundDark,
+                    fontFamily: true,
                   ),
                   SizedBox(height: getHeight(AppDimensions.paddingL)),
                 ],
